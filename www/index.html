@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ben Mantle</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body ng-app="benmantle" >
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="home">Ben Mantle</a>
+        </div>
+        <ul class="nav nav-tabs">
+          <li><a ui-sref="unlimited"></span> Unlimited Blade Works </a></li>
+          <li><a ui-sref="gallery"></span> Gallery </a></li>
+          <li><a ui-sref="writing"></span> Writing </a></li>
+          <li><a ui-sref="links"></span> Links </a></li>
+          <li><a ui-sref="seneca"></span> Seneca </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid">
+        <div ui-view></div>
+    </div>
+
+    <script src="lib/angular/angular.1.4.7.min.js"></script>
+    <script src="lib/angular/angular-ui-router.0.2.13.min.js"></script>
+
+    <script src="benmantle.min.js"></script>
+  </body>
+</html>
