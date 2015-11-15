@@ -1,40 +1,16 @@
-angular.module('benmantle', ['ui.router', 'home', 'writing', 'gallery', 'seneca', 'unlimited', 'links'])
-    .config(['$provide', '$stateProvider', '$httpProvider', '$urlRouterProvider', function ($provide, $stateProvider, $httpProvider, $urlRouterProvider) {
+angular.module('benmantle', [])
+    .controller('MainController', ['$scope', function($scope){
+        
+        //0 = home
+        $scope.showing = [0];
 
-        $urlRouterProvider.when('', 'home');
+        $scope.show = function(index) {
+            $scope.showing.map(function(x) { x = 0; });
+            $scope.showing[index] = true;
+        };
 
-        $stateProvider
-          .state('home', {
-            url: '/',
-            templateUrl: 'home/home.html',
-            controller: 'HomeController'
-          })
-          .state('unlimited', {
-            url: '/unlimited',
-            templateUrl: 'unlimited/unlimited.html'
-          })
-          .state('seneca', {
-            url: '/seneca',
-            templateUrl: 'seneca/seneca.html',
-            controller: 'SenecaController'
-          })
-          .state('links', {
-            url: '/links',
-            templateUrl: 'links/links.html',
-            controller: 'LinksController'
-        })
-        .state('writing', {
-            url: '/writing',
-            templateUrl: 'writing/writing.html',
-            controller: 'WritingController'
-        })
-        .state('gallery', {
-            url: '/gallery',
-            templateUrl: 'gallery/gallery.html',
-            controller: 'GalleryController'
-        });
+        $scope.boom = function(index) {
+            alert("cao");
+        };
 
-    }])
-    .run(['$state', '$rootScope', function($state, $rootScope) {
-
-    }]);
+}]);

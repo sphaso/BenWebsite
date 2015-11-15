@@ -5,31 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ben Mantle</title>
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <base href="file:///home/sphaso/Git/BenWebsite/www">
   </head>
-  <body ng-app="benmantle" >
-    <div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" ui-sref="home">Ben Mantle</a>
+  <body ng-app="benmantle">
+    <div class="container-fluid" ng-controller="MainController">
+        <div class="row">
+            <div class="col-xs-6 col-xs-push-1">
+                <h1>Ben Mantle</h1>
+            </div>
         </div>
-        <ul class="nav nav-tabs">
-          <li><a ui-sref="unlimited"></span> Unlimited Blade Works </a></li>
-          <li><a ui-sref="gallery"></span> Gallery </a></li>
-          <li><a ui-sref="writing"></span> Writing </a></li>
-          <li><a ui-sref="links"></span> Links </a></li>
-          <li><a ui-sref="seneca"></span> Seneca </a></li>
-        </ul>
-      </div>
+        <hr>
+        <div class="row">
+            <div class="text-center">
+            <dl>
+                <div>
+                    <dt class="col-xs-4"><a>Education</a></dt>
+                    <div class="col-xs-6">
+                      <div ng-if="!showing[0]">
+                      <dd>
+                        <h2>Seneca College</h2>
+                        <p><strong>Program:</strong> Computer Programming and Analysis (CPA)<br />
+                      </dd>
+                      <dd>
+                        <h2>University of Toronto</h2>
+                        <p><strong>Majors:</strong> Sociology, English<br />
+                      </dd>
+                      </div>
+                      <div ng-if="showing[0]">
+                          <dd>
+                            <p>Big page</p>
+                          </dd>
+                      </div>
+                    </div>
+                <div>
+                <dt class="col-xs-4">Skills</dt>
+                <div class="col-xs-6">
+                <dd>
+                <h2>Office skills</h2>
+                <p>Office and records management, database administration, event organization, customer support, travel coordination blah blah</p>
+                <h2>Computer skills</h2>
+                <p>C, C++, Python, HTML, CSS, Javascript, Microsoft productivity software (Word, Excel, etc), Command line</p>
+                </dd>
+                </div>
+                </div>
+                <div>
+              <dt class="col-xs-4">Experience</dt>
+              <div class="col-xs-6">
+              <dd>
+                <h2>Moogle Leader/Overlord - Burning-tree Mage</h2>
+                  <ul>
+                    <li>Inspired and won highest peasant death competition among servants</li>
+                    <li>Helped coordinate managers to grow cult following</li>
+                    <li>Provided untimely deaths to all who opposed</li>
+                  </ul>
+                  <h2>Triforce Inc. Front-end Web Developer - Hell, Otherworld - 20014</h2>
+                  <ul>
+                    <li>Worked on grass-roots promotional campaigns</li>
+                    <li>Burned many forests</li>
+                    <li>Killed innocents. Stole candy from baby.</li>
+                  </ul> 
+                </dd>
+                </div>
+                </div>
+                </dl>
+            </div>
+        </div>
     </div>
-    <div class="container-fluid">
-        <div ui-view></div>
-    </div>
-
-    <script src="lib/angular/angular.1.4.7.min.js"></script>
-    <script src="lib/angular/angular-ui-router.0.2.13.min.js"></script>
-
-    <script src="benmantle.min.js"></script>
+    <script src="libs/angular/angular.1.4.7.min.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
