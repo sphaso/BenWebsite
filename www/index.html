@@ -7,7 +7,7 @@
     <title>Ben Mantle</title>
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <base href="file:///home/sphaso/Git/BenWebsite/www">
+    <!--base href="file:///home/sphaso/Git/BenWebsite/www"-->
   </head>
   <body ng-app="benmantle">
     <div class="container-fluid" ng-controller="MainController">
@@ -17,57 +17,64 @@
             </div>
         </div>
         <hr>
-        <div class="row">
+        <div>
             <div class="text-center">
             <dl>
-                <div>
-                    <dt class="col-xs-4"><a>Education</a></dt>
+                <div class="row">
+                    <dt ng-class="{'col-xs-4': !showing[0], 'col-xs-2': showing[0]}"><a href="javascript:void(0)" ng-click="show(0)">Education</a></dt>
                     <div class="col-xs-6">
-                      <div ng-if="!showing[0]">
-                      <dd>
+                      <dd ng-if="!showing[0]">
                         <h2>Seneca College</h2>
                         <p><strong>Program:</strong> Computer Programming and Analysis (CPA)<br />
                       </dd>
-                      <dd>
+                      <dd ng-if="!showing[0]">
                         <h2>University of Toronto</h2>
                         <p><strong>Majors:</strong> Sociology, English<br />
                       </dd>
-                      </div>
-                      <div ng-if="showing[0]">
-                          <dd>
-                            <p>Big page</p>
-                          </dd>
-                      </div>
+                      <dd ng-if="showing[0]">
+                        <ng-include src="'resume/resume.html'" ></ng-include>
+                      </dd>
                     </div>
-                <div>
-                <dt class="col-xs-4">Skills</dt>
-                <div class="col-xs-6">
-                <dd>
-                <h2>Office skills</h2>
-                <p>Office and records management, database administration, event organization, customer support, travel coordination blah blah</p>
-                <h2>Computer skills</h2>
-                <p>C, C++, Python, HTML, CSS, Javascript, Microsoft productivity software (Word, Excel, etc), Command line</p>
-                </dd>
                 </div>
+                <div class="row">
+                    <dt ng-class="{'col-xs-4': !showing[1], 'col-xs-2': showing[1]}"><a href="javascript:void(0)" ng-click="show(1)">Skills</a></dt>
+                    <div class="col-xs-6">
+                        <dd ng-if="!showing[1]">
+                            <h2>Office skills</h2>
+                            <p>Office and records management, database administration, event organization, customer support, travel coordination blah blah</p>
+                        </dd>
+                        <dd ng-if="!showing[1]">
+                            <h2>Computer skills</h2>
+                            <p>C, C++, Python, HTML, CSS, Javascript, Microsoft productivity software (Word, Excel, etc), Command line</p>
+                        </dd>
+                        <dd ng-if="showing[1]">
+                            <ng-include src="'resume/resume.html'" ></ng-include>
+                        </dd>
+                    </div>
                 </div>
-                <div>
-              <dt class="col-xs-4">Experience</dt>
-              <div class="col-xs-6">
-              <dd>
-                <h2>Moogle Leader/Overlord - Burning-tree Mage</h2>
-                  <ul>
-                    <li>Inspired and won highest peasant death competition among servants</li>
-                    <li>Helped coordinate managers to grow cult following</li>
-                    <li>Provided untimely deaths to all who opposed</li>
-                  </ul>
-                  <h2>Triforce Inc. Front-end Web Developer - Hell, Otherworld - 20014</h2>
-                  <ul>
-                    <li>Worked on grass-roots promotional campaigns</li>
-                    <li>Burned many forests</li>
-                    <li>Killed innocents. Stole candy from baby.</li>
-                  </ul> 
-                </dd>
-                </div>
+                <div class="row">
+                    <dt ng-class="{'col-xs-4': !showing[2], 'col-xs-2': showing[2]}"><a href="javascript:void(0)" ng-click="show(2)">Experience</a></dt>
+                    <div class="col-xs-6">
+                        <dd ng-if="!showing[2]">
+                        <h2>Moogle Leader/Overlord - Burning-tree Mage</h2>
+                          <ul>
+                            <li>Inspired and won highest peasant death competition among servants</li>
+                            <li>Helped coordinate managers to grow cult following</li>
+                            <li>Provided untimely deaths to all who opposed</li>
+                          </ul>
+                        </dd>
+                        <dd ng-if="!showing[2]">
+                          <h2>Triforce Inc. Front-end Web Developer - Hell, Otherworld - 20014</h2>
+                          <ul>
+                            <li>Worked on grass-roots promotional campaigns</li>
+                            <li>Burned many forests</li>
+                            <li>Killed innocents. Stole candy from baby.</li>
+                          </ul>
+                        </dd>
+                        <dd ng-if="showing[2]">
+                            <ng-include src="'resume/resume.html'" ></ng-include>
+                        </dd>
+                    </div>
                 </div>
                 </dl>
             </div>
