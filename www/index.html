@@ -21,7 +21,7 @@
             <div class="text-center">
             <dl>
                 <div class="row">
-                    <dt ng-class="{'col-xs-4': !showing[0], 'col-xs-2': showing[0]}"><a href="javascript:void(0)" ng-click="show(0)">Education</a></dt>
+                    <dt ng-class="{'col-xs-4': !showing[0], 'col-xs-2': showing[0]}"><a href="javascript:void(0)" ng-click="show(0)">Resume</a></dt>
                     <div class="col-xs-6">
                       <dd ng-if="!showing[0]">
                         <h2>Seneca College</h2>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <dt ng-class="{'col-xs-4': !showing[1], 'col-xs-2': showing[1]}"><a href="javascript:void(0)" ng-click="show(1)">Skills</a></dt>
+                    <dt ng-class="{'col-xs-4': !showing[1], 'col-xs-2': showing[1]}"><a href="javascript:void(0)" ng-click="show(1)">Projects</a></dt>
                     <div class="col-xs-6">
                         <dd ng-if="!showing[1]">
                             <h2>Office skills</h2>
@@ -48,12 +48,12 @@
                             <p>C, C++, Python, HTML, CSS, Javascript, Microsoft productivity software (Word, Excel, etc), Command line</p>
                         </dd>
                         <dd ng-if="showing[1]">
-                            <ng-include src="'resume/resume.html'" ></ng-include>
+                            <ng-include src="'projects/projects.html'" ></ng-include>
                         </dd>
                     </div>
                 </div>
                 <div class="row">
-                    <dt ng-class="{'col-xs-4': !showing[2], 'col-xs-2': showing[2]}"><a href="javascript:void(0)" ng-click="show(2)">Experience</a></dt>
+                    <dt ng-class="{'col-xs-4': !showing[2], 'col-xs-2': showing[2]}"><a href="javascript:void(0)" ng-click="show(2)">Links</a></dt>
                     <div class="col-xs-6">
                         <dd ng-if="!showing[2]">
                         <h2>Moogle Leader/Overlord - Burning-tree Mage</h2>
@@ -72,7 +72,55 @@
                           </ul>
                         </dd>
                         <dd ng-if="showing[2]">
-                            <ng-include src="'resume/resume.html'" ></ng-include>
+                            <ng-include src="'links/links.html'" ></ng-include>
+                        </dd>
+                    </div>
+                </div>
+                <div class="row">
+                    <dt ng-class="{'col-xs-4': !showing[3], 'col-xs-2': showing[3]}"><a href="javascript:void(0)" ng-click="show(3)">Writing</a></dt>
+                    <div class="col-xs-6">
+                        <dd ng-if="!showing[3]">
+                        <h2>Moogle Leader/Overlord - Burning-tree Mage</h2>
+                          <ul>
+                            <li>Inspired and won highest peasant death competition among servants</li>
+                            <li>Helped coordinate managers to grow cult following</li>
+                            <li>Provided untimely deaths to all who opposed</li>
+                          </ul>
+                        </dd>
+                        <dd ng-if="!showing[3]">
+                          <h2>Triforce Inc. Front-end Web Developer - Hell, Otherworld - 20014</h2>
+                          <ul>
+                            <li>Worked on grass-roots promotional campaigns</li>
+                            <li>Burned many forests</li>
+                            <li>Killed innocents. Stole candy from baby.</li>
+                          </ul>
+                        </dd>
+                        <dd ng-if="showing[3]">
+                            <ng-include src="'writing/writing.html'" ></ng-include>
+                        </dd>
+                    </div>
+                </div>
+                <div class="row">
+                    <dt ng-class="{'col-xs-4': !showing[4], 'col-xs-2': showing[4]}"><a href="javascript:void(0)" ng-click="show(4)">Benkyo Tutoring</a></dt>
+                    <div class="col-xs-6">
+                        <dd ng-if="!showing[4]">
+                        <h2>Moogle Leader/Overlord - Burning-tree Mage</h2>
+                          <ul>
+                            <li>Inspired and won highest peasant death competition among servants</li>
+                            <li>Helped coordinate managers to grow cult following</li>
+                            <li>Provided untimely deaths to all who opposed</li>
+                          </ul>
+                        </dd>
+                        <dd ng-if="!showing[4]">
+                          <h2>Triforce Inc. Front-end Web Developer - Hell, Otherworld - 20014</h2>
+                          <ul>
+                            <li>Worked on grass-roots promotional campaigns</li>
+                            <li>Burned many forests</li>
+                            <li>Killed innocents. Stole candy from baby.</li>
+                          </ul>
+                        </dd>
+                        <dd ng-if="showing[4]">
+                            <ng-include src="'benkyo/benkyo.html'" ></ng-include>
                         </dd>
                     </div>
                 </div>
