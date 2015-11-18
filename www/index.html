@@ -49,38 +49,38 @@
                     </div>
                 </div>
                 <div class="row">
-                    <dt ng-class="{'col-xs-4': !showing[1], 'col-xs-2': showing[1]}"><a href="javascript:void(0)" ng-click="show(1)">Projects</a></dt>
+                    <dt ng-class="{'col-xs-4': !showing[2], 'col-xs-2': showing[2]}"><a href="javascript:void(0)" ng-click="show(2)">Projects</a></dt>
                     <div class="col-xs-6">
-                        <dd ng-if="!showing[1]">
+                        <dd ng-if="!showing[2]">
                             <h3>World domination</h3>
                             <p>Presented plans to dominate the world based on factual information from HR</p>
                             <a href="www.online-go.com">Project page</a>
                         </dd>
-                        <dd ng-if="showing[1]">
+                        <dd ng-if="showing[2]">
                             <ng-include src="'projects/projects.html'" ></ng-include>
                         </dd>
                     </div>
                 </div>
                 <div class="row">
-                    <dt ng-class="{'col-xs-4': !showing[2], 'col-xs-2': showing[2]}"><a href="javascript:void(0)" ng-click="show(2)">Links</a></dt>
+                    <dt ng-class="{'col-xs-4': !showing[3], 'col-xs-2': showing[3]}"><a href="javascript:void(0)" ng-click="show(3)">Links</a></dt>
                     <div class="col-xs-6">
-                        <dd ng-if="!showing[2]">
+                        <dd ng-if="!showing[3]">
                             <br>
                             <a href="http://www.google.com">Google</a><br>
                             <a href="http://www.online-go.com">Online Go</a>
                         </dd>
-                        <dd ng-if="showing[2]">
+                        <dd ng-if="showing[3]">
                             <ng-include src="'links/links.html'" ></ng-include>
                         </dd>
                     </div>
                 </div>
                 <div class="row">
-                    <dt ng-class="{'col-xs-4': !showing[3], 'col-xs-2': showing[3]}"><a href="javascript:void(0)" ng-click="show(3)">Writing</a></dt>
+                    <dt ng-class="{'col-xs-4': !showing[4], 'col-xs-2': showing[4]}"><a href="javascript:void(0)" ng-click="show(4)">Writing</a></dt>
                     <div class="col-xs-6">
-                        <dd ng-if="!showing[3]">
+                        <dd ng-if="!showing[4]">
                             <p>Poetry, novels, screenwriting, bestsellers...</p>
                         </dd>
-                        <dd ng-if="showing[3]">
+                        <dd ng-if="showing[4]">
                             <ng-include src="'writing/writing.html'" ></ng-include>
                         </dd>
                     </div>
