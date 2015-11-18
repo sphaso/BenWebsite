@@ -1,1 +1,1 @@
-angular.module('writing', []);
+angular.module('writing', ['writing.controllers']);

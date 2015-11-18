@@ -25,11 +25,11 @@
                     <div class="col-xs-6">
                       <dd ng-if="!showing[0]">
                         <h2>Seneca College</h2>
-                        <p><strong>Program:</strong> Computer Programming and Analysis (CPA)<br />
+                          <p><strong>Program:</strong> Computer Programming and Analysis (CPA)</p>
                       </dd>
                       <dd ng-if="!showing[0]">
-                        <h2>University of Toronto</h2>
-                        <p><strong>Majors:</strong> Sociology, English<br />
+                        <h2>Programming</h2>
+                        <p>C, C++, Python, HTML, CSS, Javascript, Unix shell</p>
                       </dd>
                       <dd ng-if="showing[0]">
                         <ng-include src="'resume/resume.html'" ></ng-include>
@@ -37,15 +37,24 @@
                     </div>
                 </div>
                 <div class="row">
+                    <dt ng-class="{'col-xs-4': !showing[1], 'col-xs-2': showing[1]}"><a href="javascript:void(0)" ng-click="show(1)">Profile</a></dt>
+                    <div class="col-xs-6">
+                        <dd>
+                            <div class="col-xs-6" ng-show="showing[1]"><img src="img/me.jpg" class="img-responsive"/></div>
+                            <div ng-class="{'col-xs-6' : showing[1]}">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        </dd>
+                        <dd ng-if="showing[1]">
+                            <ng-include src="'profile/profile.html'"></ng-include>
+                        </dd>
+                    </div>
+                </div>
+                <div class="row">
                     <dt ng-class="{'col-xs-4': !showing[1], 'col-xs-2': showing[1]}"><a href="javascript:void(0)" ng-click="show(1)">Projects</a></dt>
                     <div class="col-xs-6">
                         <dd ng-if="!showing[1]">
-                            <h2>Office skills</h2>
-                            <p>Office and records management, database administration, event organization, customer support, travel coordination blah blah</p>
-                        </dd>
-                        <dd ng-if="!showing[1]">
-                            <h2>Computer skills</h2>
-                            <p>C, C++, Python, HTML, CSS, Javascript, Microsoft productivity software (Word, Excel, etc), Command line</p>
+                            <h3>World domination</h3>
+                            <p>Presented plans to dominate the world based on factual information from HR</p>
+                            <a href="www.online-go.com">Project page</a>
                         </dd>
                         <dd ng-if="showing[1]">
                             <ng-include src="'projects/projects.html'" ></ng-include>
@@ -56,20 +65,9 @@
                     <dt ng-class="{'col-xs-4': !showing[2], 'col-xs-2': showing[2]}"><a href="javascript:void(0)" ng-click="show(2)">Links</a></dt>
                     <div class="col-xs-6">
                         <dd ng-if="!showing[2]">
-                        <h2>Moogle Leader/Overlord - Burning-tree Mage</h2>
-                          <ul>
-                            <li>Inspired and won highest peasant death competition among servants</li>
-                            <li>Helped coordinate managers to grow cult following</li>
-                            <li>Provided untimely deaths to all who opposed</li>
-                          </ul>
-                        </dd>
-                        <dd ng-if="!showing[2]">
-                          <h2>Triforce Inc. Front-end Web Developer - Hell, Otherworld - 20014</h2>
-                          <ul>
-                            <li>Worked on grass-roots promotional campaigns</li>
-                            <li>Burned many forests</li>
-                            <li>Killed innocents. Stole candy from baby.</li>
-                          </ul>
+                            <br>
+                            <a href="http://www.google.com">Google</a><br>
+                            <a href="http://www.online-go.com">Online Go</a>
                         </dd>
                         <dd ng-if="showing[2]">
                             <ng-include src="'links/links.html'" ></ng-include>
@@ -80,47 +78,10 @@
                     <dt ng-class="{'col-xs-4': !showing[3], 'col-xs-2': showing[3]}"><a href="javascript:void(0)" ng-click="show(3)">Writing</a></dt>
                     <div class="col-xs-6">
                         <dd ng-if="!showing[3]">
-                        <h2>Moogle Leader/Overlord - Burning-tree Mage</h2>
-                          <ul>
-                            <li>Inspired and won highest peasant death competition among servants</li>
-                            <li>Helped coordinate managers to grow cult following</li>
-                            <li>Provided untimely deaths to all who opposed</li>
-                          </ul>
-                        </dd>
-                        <dd ng-if="!showing[3]">
-                          <h2>Triforce Inc. Front-end Web Developer - Hell, Otherworld - 20014</h2>
-                          <ul>
-                            <li>Worked on grass-roots promotional campaigns</li>
-                            <li>Burned many forests</li>
-                            <li>Killed innocents. Stole candy from baby.</li>
-                          </ul>
+                            <p>Poetry, novels, screenwriting, bestsellers...</p>
                         </dd>
                         <dd ng-if="showing[3]">
                             <ng-include src="'writing/writing.html'" ></ng-include>
-                        </dd>
-                    </div>
-                </div>
-                <div class="row">
-                    <dt ng-class="{'col-xs-4': !showing[4], 'col-xs-2': showing[4]}"><a href="javascript:void(0)" ng-click="show(4)">Benkyo Tutoring</a></dt>
-                    <div class="col-xs-6">
-                        <dd ng-if="!showing[4]">
-                        <h2>Moogle Leader/Overlord - Burning-tree Mage</h2>
-                          <ul>
-                            <li>Inspired and won highest peasant death competition among servants</li>
-                            <li>Helped coordinate managers to grow cult following</li>
-                            <li>Provided untimely deaths to all who opposed</li>
-                          </ul>
-                        </dd>
-                        <dd ng-if="!showing[4]">
-                          <h2>Triforce Inc. Front-end Web Developer - Hell, Otherworld - 20014</h2>
-                          <ul>
-                            <li>Worked on grass-roots promotional campaigns</li>
-                            <li>Burned many forests</li>
-                            <li>Killed innocents. Stole candy from baby.</li>
-                          </ul>
-                        </dd>
-                        <dd ng-if="showing[4]">
-                            <ng-include src="'benkyo/benkyo.html'" ></ng-include>
                         </dd>
                     </div>
                 </div>
@@ -129,6 +90,8 @@
         </div>
     </div>
     <script src="libs/angular/angular.1.4.7.min.js"></script>
+    <script src="writing/writing.modules.js"></script>
+    <script src="writing/writing.controllers.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

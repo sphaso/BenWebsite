@@ -1,4 +1,4 @@
-angular.module('benmantle', [])
+angular.module('benmantle', ['writing'])
     .controller('MainController', ['$scope', function($scope){
 
         //0 = home
