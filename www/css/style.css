@@ -15,3 +15,8 @@ dt {
 .grey {
     background-color: #FAFAFA;
 }
+
+.fa {
+    padding-left: 3px;
+    padding-right: 3px;
+}
