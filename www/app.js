@@ -2,15 +2,18 @@ angular.module('benmantle', ['writing'])
     .controller('MainController', ['$scope', function($scope){
 
         //0 = home
-        $scope.showing = [0];
+        $scope.showing = [true,true,true,true,true,true];
+
+        $scope.all = function(){
+            return $scope.showing.reduce(function(a,b) { return a && b; });
+        };
 
         $scope.show = function(index) {
-            if($scope.showing[index]){
-                $scope.showing[index] = false;
-                return;
+            if(!$scope.showing[index]){
+                $scope.showing = [true,true,true,true,true,true];
             }
-
-            $scope.showing.map(function(x) { x = 0; });
-            $scope.showing[index] = true;
+            else {
+                $scope.showing[index] = 0;
+            }
         };
 }]);
