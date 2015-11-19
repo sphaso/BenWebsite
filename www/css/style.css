@@ -3,7 +3,7 @@ h2 {
     position: relative;
 }
 
-a {
+a:hover {
     text-decoration: none;
 }
 
@@ -26,4 +26,10 @@ dt {
 
 .borderize {
     border-right: 1px solid #999;
+    padding-right: 10px;
+}
+
+.customTitle {
+    font-size: 18px;
+    padding-left: 10px;
 }
