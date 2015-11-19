@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css" />
-    <!--base href="file:///home/sphaso/Git/BenWebsite/www/"-->
+    <base href="file:///home/sphaso/Git/BenWebsite/www/">
   </head>
   <body ng-app="benmantle">
     <div class="container-fluid" ng-controller="MainController">
         <div class="row">
             <div class="text-center">
-                <h1>Ben Mantle</h1>
+                <h2 class="borderize">Ben Mantle</h2><span>Custom Title</span>
                 <a href="http://www.math.harvard.edu/~eriehl/266x/basic.pdf"><span class="fa fa-file-pdf-o"></a>
                 <a href="https://github.com/6dan"><span class="fa fa-github"></span></a>
                 <a href="https://twitter.com/bktutoring"><span class="fa fa-twitter"></span></a>
@@ -26,11 +26,11 @@
             <div class="text-center">
             <dl>
                 <div class="row" ng-show="all() || !showing[1]">
-                    <dt ng-class="{'col-xs-4': showing[1], 'col-xs-2': !showing[1]}"><a href="javascript:void(0)" ng-click="show(1)">Profile</a></dt>
-                    <div class="col-xs-6 grey">
+                    <dt ng-class="{'col-xs-2': showing[1], 'col-xs-2': !showing[1]}"><a href="javascript:void(0)" ng-click="show(1)">Profile</a></dt>
+                    <div class="col-xs-6" ng-class="{'grey': !showing[1]}">
                         <dd>
-                            <div class="col-xs-6" ng-show="!showing[1]"><img src="img/me.jpg" class="img-responsive"/></div>
                             <div ng-class="{'col-xs-6' : !showing[1]}">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="col-xs-6" ng-show="!showing[1]"><img src="img/me.jpg" class="img-responsive"/></div>
                         </dd>
                         <dd ng-if="!showing[1]">
                             <ng-include src="'profile/profile.html'"></ng-include>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                  <div class="row" ng-show="all() || !showing[0]">
-                    <dt ng-class="{'col-xs-4': showing[0], 'col-xs-2': !showing[0]}"><a href="javascript:void(0)" ng-click="show(0)">Resume</a><br><a href="http://www.math.harvard.edu/~eriehl/266x/basic.pdf"><span class="fa fa-file-pdf-o"></a></dt>
+                    <dt ng-class="{'col-xs-2': showing[0], 'col-xs-2': !showing[0]}"><a href="javascript:void(0)" ng-click="show(0)">Resume</a><br><a href="http://www.math.harvard.edu/~eriehl/266x/basic.pdf"><span class="fa fa-file-pdf-o"></a></dt>
                     <div class="col-xs-6">
                       <dd ng-if="showing[0]">
                         <h2>Seneca College</h2>
@@ -54,8 +54,8 @@
                     </div>
                 </div>
                 <div class="row" ng-show="all() || !showing[2]">
-                    <dt ng-class="{'col-xs-4': showing[2], 'col-xs-2': !showing[2]}"><a href="javascript:void(0)" ng-click="show(2)">Projects</a><br><a href="https://github.com/6dan"><span class="fa fa-github"></span></a></dt>
-                    <div class="col-xs-6 grey">
+                    <dt ng-class="{'col-xs-2': showing[2], 'col-xs-2': !showing[2]}"><a href="javascript:void(0)" ng-click="show(2)">Projects</a><br><a href="https://github.com/6dan"><span class="fa fa-github"></span></a></dt>
+                    <div class="col-xs-6" ng-class="{'grey': !showing[1]}">
                         <dd ng-if="showing[2]">
                             <h3>World domination</h3>
                             <p>Presented plans to dominate the world based on factual information from HR</p>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="row" ng-show="all() || !showing[3]">
-                    <dt ng-class="{'col-xs-4': showing[3], 'col-xs-2': !showing[3]}"><a href="javascript:void(0)" ng-click="show(3)">Links</a></dt>
+                    <dt ng-class="{'col-xs-2': showing[3], 'col-xs-2': !showing[3]}"><a href="javascript:void(0)" ng-click="show(3)">Links</a></dt>
                     <div class="col-xs-6">
                         <dd ng-if="showing[3]">
                             <br>
@@ -80,8 +80,8 @@
                     </div>
                 </div>
                 <div class="row" ng-show="all() || !showing[4]">
-                    <dt ng-class="{'col-xs-4': showing[4], 'col-xs-2': !showing[4]}"><a href="javascript:void(0)" ng-click="show(4)">Writing</a></dt>
-                    <div class="col-xs-6 grey">
+                    <dt ng-class="{'col-xs-2': showing[4], 'col-xs-2': !showing[4]}"><a href="javascript:void(0)" ng-click="show(4)">Writing</a></dt>
+                    <div class="col-xs-6" ng-class="{'grey': !showing[1]}">
                         <dd ng-if="showing[4]">
                             <p>Poetry, novels, screenwriting, bestsellers...</p>
                         </dd>
