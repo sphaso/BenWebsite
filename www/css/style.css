@@ -3,6 +3,14 @@ h2 {
     position: relative;
 }
 
+h3 {
+    margin: 5px 0 5px 0;
+}
+
+a {
+    cursor: pointer;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -16,6 +24,8 @@ dt {
 }
 
 .grey {
+    margin: 0;
+    padding: 15px 0 15px 0;
     background-color: #FAFAFA;
 }
 
@@ -32,4 +42,10 @@ dt {
 .customTitle {
     font-size: 18px;
     padding-left: 10px;
+}
+
+/* TODO: Media query */
+.spacing {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
