@@ -21,14 +21,13 @@
                 <a href="https://www.facebook.com/benkyotutoring"><span class="fa fa-facebook"></span></a>
             </div>
         </div>
-        <hr>
         <div>
             <div class="text-center">
             <dl>
                 <div class="row" ng-show="all() || !showing[1]" ng-class="{grey: showing[1]}">
                     <dt class="col-xs-2"><a ng-click="show(1)">Profile</a></dt>
                     <div class="col-xs-8" >
-                        <dd>
+                        <dd class="preview">
                             <div ng-class="{'col-xs-6' : !showing[1]}">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                             <div class="col-xs-6" ng-show="!showing[1]"><img src="img/me.jpg" class="img-responsive"/></div>
                         </dd>
@@ -37,57 +36,44 @@
                         </dd>
                     </div>
                 </div>
-                <hr>
                  <div class="row spacing" ng-show="all() || !showing[0]">
                     <dt class="col-xs-2"><a ng-click="show(0)">Resume</a><br><a href="http://www.math.harvard.edu/~eriehl/266x/basic.pdf"><span class="fa fa-file-pdf-o"></a></dt>
                     <div class="col-xs-8">
-                      <dd ng-if="showing[0]">
-                        <h2>Seneca College</h2>
-                          <p><strong>Program:</strong> Computer Programming and Analysis (CPA)</p>
-                      </dd>
-                      <dd ng-if="showing[0]">
-                        <h2>Programming</h2>
-                        <p>C, C++, Python, HTML, CSS, Javascript, Unix shell</p>
+                      <dd ng-if="showing[0]" class="preview">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                       </dd>
                       <dd ng-if="!showing[0]">
                         <ng-include src="'resume/resume.html'" ></ng-include>
                       </dd>
                     </div>
                 </div>
-                <hr>
                 <div class="row spacing" ng-show="all() || !showing[2]" ng-class="{grey: showing[2]}">
                     <dt class="col-xs-2"><a ng-click="show(2)">Projects</a><br><a href="https://github.com/6dan"><span class="fa fa-github"></span></a></dt>
                     <div class="col-xs-8">
-                        <dd ng-if="showing[2]">
-                            <h3>World domination</h3>
-                            <p>Presented plans to dominate the world based on factual information from HR</p>
-                            <a href="www.online-go.com">Project page</a>
+                        <dd ng-if="showing[2]" class="preview">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </dd>
                         <dd ng-if="!showing[2]">
                             <ng-include src="'projects/projects.html'" ></ng-include>
                         </dd>
                     </div>
                 </div>
-                <hr>
                 <div class="row spacing" ng-show="all() || !showing[3]">
                     <dt class="col-xs-2"><a ng-click="show(3)">Links</a></dt>
                     <div class="col-xs-8">
-                        <dd ng-if="showing[3]">
-                            <br>
-                            <a href="http://www.google.com">Google</a><br>
-                            <a href="http://www.online-go.com">Online Go</a>
+                        <dd ng-if="showing[3]" class="preview">
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </dd>
                         <dd ng-if="!showing[3]">
                             <ng-include src="'links/links.html'" ></ng-include>
                         </dd>
                     </div>
                 </div>
-                <hr>
                 <div class="row spacing" ng-show="all() || !showing[4]" ng-class="{grey: showing[4]}">
                     <dt class="col-xs-2"><a ng-click="show(4)">Writing</a></dt>
                     <div class="col-xs-8">
-                        <dd ng-if="showing[4]">
-                            <p>Poetry, novels, screenwriting, bestsellers...</p>
+                        <dd ng-if="showing[4]" class="preview">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </dd>
                         <dd ng-if="!showing[4]">
                             <ng-include src="'writing/writing.html'" ></ng-include>

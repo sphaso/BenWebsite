@@ -49,3 +49,7 @@ dt {
     margin-top: 25px;
     margin-bottom: 25px;
 }
+
+.preview {
+    height: 100px;
+}
